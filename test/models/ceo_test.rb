@@ -15,4 +15,11 @@ describe Ceo do
       ceo.save!
     }
   end
+
+  it "raises exception when there is no company" do
+    ceo = Ceo.new(name: "Peter")
+    assert_raises(ActiveRecord::RecordInvalid){
+      ceo.save!
+    }
+  end
 end
