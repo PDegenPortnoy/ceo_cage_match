@@ -34,8 +34,11 @@ group :development, :test do
 end
 
 
-# Set up MiniTest for use in Rails
- gem "minitest-rails", group: :test
+group :test do
+  # Set up MiniTest for use in Rails
+   gem 'minitest-rails'
+   gem 'cucumber-rails', require: false
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
