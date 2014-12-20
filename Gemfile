@@ -30,7 +30,9 @@ group :development, :test do
   #gem 'guard-spring'
   #gem 'guard-rspec', require: false
   gem 'guard-minitest'
+  gem 'guard-cucumber'
   gem 'rb-fsevent' if `uname` =~ /Darwin/
+  gem 'haml-rails', '>= 0.3.4'
 end
 
 
@@ -38,6 +40,7 @@ group :test do
   # Set up MiniTest for use in Rails
    gem 'minitest-rails'
    gem 'cucumber-rails', require: false
+   gem 'database_cleaner'
 end
 
 # Use ActiveModel has_secure_password
