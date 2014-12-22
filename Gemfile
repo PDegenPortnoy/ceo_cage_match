@@ -41,6 +41,7 @@ group :test do
    gem 'minitest-rails'
    gem 'cucumber-rails', require: false
    gem 'database_cleaner'
+   gem 'minitest-reporters' # for nice formatting of minitest output
 end
 
 # Use ActiveModel has_secure_password

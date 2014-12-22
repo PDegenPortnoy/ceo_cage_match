@@ -1,5 +1,4 @@
-.h1 Matches#show
-%p
-  - @contestants.each do |contestant|
-    %p= "CEO Name: #{contestant.name}"
-
+%h1 Matches#show
+- @contestants.each do |contestant|
+  %p= "CEO Name: #{contestant.name}"
+  %p= "Company:  #{contestant.company}"

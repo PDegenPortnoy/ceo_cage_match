@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: CEO One
   salary: 1
-  company: MyString
+  company: Company One
   company_revenue: 1
   number_employees: 1
 
 two:
-  name: MyString
-  salary: 1
-  company: MyString
-  company_revenue: 1
-  number_employees: 1
+  name: CEO Two
+  salary: 2
+  company: Company Two
+  company_revenue: 2
+  number_employees: 2

@@ -16,3 +16,7 @@ class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
 end
+
+# Make the MiniTest output attractive
+reporter_options = { color: true }
+Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
