@@ -26,9 +26,24 @@ guard :minitest, spring: 'bundle exec spring rake test' do
   watch(%r{^lib/(.+)\.rb$})                               { |m| "test/lib/#{m[1]}_test.rb" }
   watch(%r{^test/.+_test\.rb$})
   watch(%r{^test/test_helper\.rb$}) { 'test' }
+end
 
-  # Rails < 4
-  # watch(%r{^app/controllers/(.*)\.rb$}) { |m| "test/functional/#{m[1]}_test.rb" }
-  # watch(%r{^app/helpers/(.*)\.rb$})     { |m| "test/helpers/#{m[1]}_test.rb" }
-  # watch(%r{^app/models/(.*)\.rb$})      { |m| "test/unit/#{m[1]}_test.rb" }
+guard "cucumber", cli: '--profile guard' do
+  watch(%r{^features/.+\.feature$})
+  watch(%r{^features/support/.+$})          { "features" }
+  watch(%r{^features/step_definitions/(.+)_steps\.rb$}) do |m|
+    Dir[File.join("**/#{m[1]}.feature")][0] || "features"
+  end
+end
+
+# Sample guardfile block for Guard::Haml
+# You can use some options to change guard-haml configuration
+# output: 'public'                   set output directory for compiled files
+# input: 'src'                       set input directory with haml files
+# run_at_start: true                 compile files when guard starts
+# notifications: true                send notifictions to Growl/libnotify/Notifu
+# haml_options: { ugly: true }    pass options to the Haml engine
+
+guard :haml do
+  watch(/^.+(\.html\.haml)$/)
 end

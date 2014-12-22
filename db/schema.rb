@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141203005223) do
+ActiveRecord::Schema.define(version: 20141220212855) do
 
   create_table "ceos", force: true do |t|
     t.string   "name"
@@ -24,5 +24,13 @@ ActiveRecord::Schema.define(version: 20141203005223) do
   end
 
   add_index "ceos", ["name"], name: "index_ceos_on_name"
+
+  create_table "matches", force: true do |t|
+    t.integer  "one"
+    t.integer  "two"
+    t.integer  "winner"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

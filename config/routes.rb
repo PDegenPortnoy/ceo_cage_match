@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'matches/show'
+
+  root 'matches#show'
   resources :ceos
 
   # The priority is based upon order of creation: first created -> highest priority.

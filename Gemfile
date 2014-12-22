@@ -27,12 +27,12 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'guard'
-  #gem 'guard-spring'
-  #gem 'guard-rspec', require: false
   gem 'guard-minitest'
   gem 'guard-cucumber'
+  gem 'guard-haml'
   gem 'rb-fsevent' if `uname` =~ /Darwin/
   gem 'haml-rails', '>= 0.3.4'
+  gem 'capybara'
 end
 
 
