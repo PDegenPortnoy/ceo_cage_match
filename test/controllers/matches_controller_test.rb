@@ -14,4 +14,12 @@ class MatchesControllerTest < ActionController::TestCase
     end
   end
 
+  test "show has like button" do
+    get :show
+    contestants = assigns(:contestants)
+    contestants.each do |contestant|
+      assert_select "button#contestant_#{contestant.id}", {text: "Like"} 
+    end
+  end
+
 end

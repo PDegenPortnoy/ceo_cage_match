@@ -2,3 +2,5 @@
 - @contestants.each do |contestant|
   %p= "CEO Name: #{contestant.name}"
   %p= "Company:  #{contestant.company}"
+  %button{id: ['contestant', contestant.id]} Like
+

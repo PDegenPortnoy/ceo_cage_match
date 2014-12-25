@@ -1,8 +1,6 @@
 Given /there are two CEOs in the system/ do 
   # Using Fixtures.  See features/support/env.rg
-  #2.times do |i|
-  #  Ceo.create(name: "CEO Name #{i}", company: "Company #{i}")
-  #end
+  assert Ceo.all.size, 2
 end
 
 When /I am on the home page/ do
@@ -16,4 +14,16 @@ Then /I should see two CEOs/ do
   assert page.has_content? @ceos.first.company
   assert page.has_content? @ceos.last.name
   assert page.has_content? @ceos.last.company
+end
+
+When /I click "(.*)" for the first CEOs/ do |vote|
+  first('button').click
+end
+
+Then(/^That CEO should "(.*?)" the contest$/) do |event|
+  pending 
+end
+
+Then(/^get a "(.*?)" vote$/) do |score|
+  pending
 end
