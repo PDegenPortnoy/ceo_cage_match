@@ -22,4 +22,10 @@ describe Ceo do
       ceo.save!
     }
   end
+
+  it "returns the number of wins" do
+    ceo_1 = ceos(:one)
+    assert 0, ceo_1.wins
+  end
+
 end

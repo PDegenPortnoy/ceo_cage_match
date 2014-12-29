@@ -33,12 +33,14 @@ group :development, :test do
   gem 'rb-fsevent' if `uname` =~ /Darwin/
   gem 'haml-rails', '>= 0.3.4'
   gem 'capybara'
+  gem 'pry-rails'
 end
 
 
 group :test do
   # Set up MiniTest for use in Rails
    gem 'minitest-rails'
+   gem 'minitest-spec-rails'
    gem 'cucumber-rails', require: false
    gem 'database_cleaner'
    gem 'minitest-reporters' # for nice formatting of minitest output

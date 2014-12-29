@@ -9,6 +9,5 @@ Feature: Home Page
     Given there are two CEOs in the system
     When I am on the home page
     When I click "Like" for the first CEOs
-    Then That CEO should "win" the contest
-    And get a "Like" vote
+    Then That CEO should win
 
