@@ -5,13 +5,8 @@ class MatchesController < ApplicationController
 
   def create
     @match = Match.new(match_params)
-    if @match.save
-      flash[:success] = "#{selected_ceo.name} appreciates your vote of confidence"
-      redirect_to new_match_url
-    else
-      flash[:error] = "Unable to record your vote"
-      redirect_to new_match_url
-    end
+    @match.save
+    redirect_to new_match_url, notice: "CEO #{selected_ceo.name} appreciates your vote of confidence"
   end
 
   private

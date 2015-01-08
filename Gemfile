@@ -34,6 +34,7 @@ group :development, :test do
   gem 'haml-rails', '>= 0.3.4'
   gem 'capybara'
   gem 'pry-rails'
+  gem 'launchy'
 end
 
 

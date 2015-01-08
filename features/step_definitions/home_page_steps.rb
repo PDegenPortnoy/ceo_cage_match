@@ -22,6 +22,7 @@ end
 
 Then /^That CEO should win$/ do
   ceo = Ceo.first
+  save_and_open_page
   assert page.has_content? "CEO #{ceo.name} appreciates your vote of confidence!"  
 end
 
